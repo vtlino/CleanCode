@@ -20,3 +20,14 @@ C:\GitHub\CleanCode\CleanCode\obj\Debug\netcoreapp2.1\CleanCode.AssemblyInfoInpu
 C:\GitHub\CleanCode\CleanCode\obj\Debug\netcoreapp2.1\CleanCode.AssemblyInfo.cs
 C:\GitHub\CleanCode\CleanCode\obj\Debug\netcoreapp2.1\CleanCode.dll
 C:\GitHub\CleanCode\CleanCode\obj\Debug\netcoreapp2.1\CleanCode.pdb
+D:\Projetos\CleanCode\CleanCode\bin\Debug\netcoreapp2.1\CleanCode.deps.json
+D:\Projetos\CleanCode\CleanCode\bin\Debug\netcoreapp2.1\CleanCode.runtimeconfig.json
+D:\Projetos\CleanCode\CleanCode\bin\Debug\netcoreapp2.1\CleanCode.runtimeconfig.dev.json
+D:\Projetos\CleanCode\CleanCode\bin\Debug\netcoreapp2.1\CleanCode.dll
+D:\Projetos\CleanCode\CleanCode\bin\Debug\netcoreapp2.1\CleanCode.pdb
+D:\Projetos\CleanCode\CleanCode\obj\Debug\netcoreapp2.1\CleanCode.csprojAssemblyReference.cache
+D:\Projetos\CleanCode\CleanCode\obj\Debug\netcoreapp2.1\CleanCode.csproj.CoreCompileInputs.cache
+D:\Projetos\CleanCode\CleanCode\obj\Debug\netcoreapp2.1\CleanCode.AssemblyInfoInputs.cache
+D:\Projetos\CleanCode\CleanCode\obj\Debug\netcoreapp2.1\CleanCode.AssemblyInfo.cs
+D:\Projetos\CleanCode\CleanCode\obj\Debug\netcoreapp2.1\CleanCode.dll
+D:\Projetos\CleanCode\CleanCode\obj\Debug\netcoreapp2.1\CleanCode.pdb

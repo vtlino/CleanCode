@@ -12,7 +12,8 @@ namespace CleanCode
 
         static void Main(string[] args)
         {
-            string fullWord = "Vinícius Terra Lino";
+            Console.WriteLine("Digite o nome:");
+            string fullWord = Console.ReadLine();
 
             var wordsSeparated = SeparateWordsBySpace(fullWord);
             var hasError = VerifyError(wordsSeparated);
@@ -25,6 +26,8 @@ namespace CleanCode
 
             var wordTreated = DoLogicalTreatment(wordsSeparated);
 
+            Console.WriteLine();
+            Console.WriteLine("Nome formatado:");
             Console.WriteLine(wordTreated);
             Console.Read();
         }
@@ -58,11 +61,12 @@ namespace CleanCode
                 }
                 wordFormated += " ";
             }
+            wordFormated = wordFormated.Remove(wordFormated.Length - INDEX_TO_REMOVE);
 
             if (VerifyIfIsEven(wordFormated.Length))
                 return wordFormated.Substring(INDEX_TO_REMOVE);
             else
-                return wordFormated.Substring(wordFormated.Length - INDEX_TO_REMOVE);
+                return wordFormated.Remove(wordFormated.Length - INDEX_TO_REMOVE);
         }
 
         private static bool VerifyIfIsEven(int number)
