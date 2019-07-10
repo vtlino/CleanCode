@@ -1,0 +1,11 @@
+C:\Users\lucas\source\repos\CleanCode\bin\Debug\netcoreapp2.1\CleanCode.deps.json
+C:\Users\lucas\source\repos\CleanCode\bin\Debug\netcoreapp2.1\CleanCode.runtimeconfig.json
+C:\Users\lucas\source\repos\CleanCode\bin\Debug\netcoreapp2.1\CleanCode.runtimeconfig.dev.json
+C:\Users\lucas\source\repos\CleanCode\bin\Debug\netcoreapp2.1\CleanCode.dll
+C:\Users\lucas\source\repos\CleanCode\bin\Debug\netcoreapp2.1\CleanCode.pdb
+C:\Users\lucas\source\repos\CleanCode\obj\Debug\netcoreapp2.1\CleanCode.csprojAssemblyReference.cache
+C:\Users\lucas\source\repos\CleanCode\obj\Debug\netcoreapp2.1\CleanCode.csproj.CoreCompileInputs.cache
+C:\Users\lucas\source\repos\CleanCode\obj\Debug\netcoreapp2.1\CleanCode.AssemblyInfoInputs.cache
+C:\Users\lucas\source\repos\CleanCode\obj\Debug\netcoreapp2.1\CleanCode.AssemblyInfo.cs
+C:\Users\lucas\source\repos\CleanCode\obj\Debug\netcoreapp2.1\CleanCode.dll
+C:\Users\lucas\source\repos\CleanCode\obj\Debug\netcoreapp2.1\CleanCode.pdb
