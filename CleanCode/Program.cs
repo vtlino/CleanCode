@@ -8,11 +8,11 @@ namespace CleanCode
     {
         private const int LIMIT_INFERIOR = 1;
         private const int LIMIT_SUPERIOR = 3;
+        private const int INDEX_TO_REMOVE = 1;
 
         static void Main(string[] args)
         {
-            //string fullWord = "Vinícius Terra Lino";
-            string fullWord = "Vinícius Terra Lino sss";
+            string fullWord = "Vinícius Terra Lino";
 
             var wordsSeparated = SeparateWordsBySpace(fullWord);
             var hasError = VerifyError(wordsSeparated);
@@ -59,7 +59,10 @@ namespace CleanCode
                 wordFormated += " ";
             }
 
-            return wordFormated;
+            if (VerifyIfIsEven(wordFormated.Length))
+                return wordFormated.Substring(INDEX_TO_REMOVE);
+            else
+                return wordFormated.Substring(wordFormated.Length - INDEX_TO_REMOVE);
         }
 
         private static bool VerifyIfIsEven(int number)
