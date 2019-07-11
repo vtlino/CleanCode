@@ -6,8 +6,8 @@ namespace CleanCode
 {
     class Program
     {
-        private const int LIMIT_INFERIOR = 1;
-        private const int LIMIT_SUPERIOR = 3;
+        private const int LIMIT_LOWER = 1;
+        private const int LIMIT_UPPER = 3;
         private const int INDEX_TO_REMOVE = 1;
 
         static void Main(string[] args)
@@ -16,7 +16,7 @@ namespace CleanCode
             string fullWord = Console.ReadLine();
 
             var wordsSeparated = SeparateWordsBySpace(fullWord);
-            var hasError = VerifyError(wordsSeparated);
+            var hasError = IsError(wordsSeparated);
 
             if (hasError)
             {
@@ -37,14 +37,14 @@ namespace CleanCode
             return name.Split(" ").ToList();
         }
 
-        private static bool VerifyError(List<string> wordsSeparated)
+        private static bool IsError(List<string> wordsSeparated)
         {
-            return wordsSeparated.Count < LIMIT_INFERIOR || wordsSeparated.Count > LIMIT_SUPERIOR;
+            return ((wordsSeparated.Count == 1 && string.IsNullOrWhiteSpace(wordsSeparated.First())) || wordsSeparated.Count < LIMIT_LOWER || wordsSeparated.Count > LIMIT_UPPER);
         }
 
         private static string DoLogicalTreatment(List<string> wordsSeparated)
         {
-            var wordsAreEven = VerifyIfIsEven(wordsSeparated.Count);
+            var wordsAreEven = IsEven(wordsSeparated.Count);
             var wordFormated = "";
             var characterCalculated = "";
 
@@ -54,40 +54,45 @@ namespace CleanCode
 
                 foreach (var character in word)
                 {
-                    characterCalculated = wordsAreEven ? CalculateCharForEvenWords(character, index) : CalculateCharForOddWords(character, index);
+                    characterCalculated = wordsAreEven ? CalculateCharacterForEvenWords(character, index) : CalculateCharacterForOddWords(character, index);
                     wordFormated += characterCalculated;
 
                     index++;
                 }
                 wordFormated += " ";
             }
-            wordFormated = wordFormated.Remove(wordFormated.Length - INDEX_TO_REMOVE);
+            wordFormated = RemoveLastCharacter(wordFormated);
 
-            if (VerifyIfIsEven(wordFormated.Length))
+            if (IsEven(wordFormated.Length))
                 return wordFormated.Substring(INDEX_TO_REMOVE);
             else
-                return wordFormated.Remove(wordFormated.Length - INDEX_TO_REMOVE);
+                return RemoveLastCharacter(wordFormated);
         }
 
-        private static bool VerifyIfIsEven(int number)
+        private static bool IsEven(int number)
         {
             return number % 2 == 0;
         }
 
-        private static string CalculateCharForEvenWords(char character, int index)
+        private static string CalculateCharacterForEvenWords(char character, int index)
         {
-            if (!VerifyIfIsEven(index))
+            if (IsEven(index))
                 return character.ToString();
 
             return "";
         }
 
-        private static string CalculateCharForOddWords(char character, int index)
+        private static string CalculateCharacterForOddWords(char character, int index)
         {
-            if (VerifyIfIsEven(index))
+            if (!IsEven(index))
                 return character.ToString();
 
             return "";
+        }
+
+        private static string RemoveLastCharacter(string word)
+        {
+            return word.Remove(word.Length - INDEX_TO_REMOVE);
         }
     }
 }
